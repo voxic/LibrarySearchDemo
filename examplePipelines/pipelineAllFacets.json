@@ -1,0 +1,26 @@
+[
+    {
+        "$searchMeta": {
+            "index": "default",
+            "facet": {
+                "facets": {
+                    "authorFacet": {
+                        "type": "string",
+                        "path": "authors.name",
+                        "numBuckets": 7
+                    },
+                    "typeFacet": {
+                        "type": "string",
+                        "path": "book_type",
+                        "numBuckets": 7
+                    },
+                    "contentFacet": {
+                        "type": "string",
+                        "path": "content_type",
+                        "numBuckets": 7
+                    }
+                }
+            }
+        }
+    }
+]

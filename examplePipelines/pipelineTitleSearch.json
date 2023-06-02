@@ -1,0 +1,19 @@
+[
+    {
+        "$search": {
+            "compound": {
+                "must": [
+                    {
+                        "text": {
+                            "query": "Innan",
+                            "path": "title"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$limit": 5
+    }
+]

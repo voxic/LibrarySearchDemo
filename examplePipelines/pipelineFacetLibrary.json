@@ -1,0 +1,34 @@
+[
+    {
+        "$searchMeta": {
+            "index": "default",
+            "facet": {
+                "operator": {
+                    "compound": {
+                        "should": [
+                            {
+                                "equals": {
+                                    "value": 10027641,
+                                    "path": "_id"
+                                }
+                            },
+                            {
+                                "equals": {
+                                    "value": 10055411,
+                                    "path": "_id"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "facets": {
+                    "authorFacet": {
+                        "type": "string",
+                        "path": "authors.name",
+                        "numBuckets": 7
+                    }
+                }
+            }
+        }
+    }
+]

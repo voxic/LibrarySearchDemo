@@ -1,0 +1,25 @@
+[
+    {
+        "$group": {
+            "_id": "$profileid",
+            "id": {
+                "$addToSet": "$bookid"
+            }
+        }
+    },
+    {
+        "$lookup": {
+            "from": "products",
+            "localField": "id",
+            "foreignField": "_id",
+            "as": "books"
+        }
+    },
+    {
+        "$project": {
+            "_id": 0,
+            "bookids": "$id",
+            "books": 1
+        }
+    }
+]

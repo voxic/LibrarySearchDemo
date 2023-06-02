@@ -1,0 +1,39 @@
+[
+    {
+        "$search": {
+            "compound": {
+                "must": [
+                    {
+                        "text": {
+                            "query": "Innan",
+                            "path": "title"
+                        }
+                    },
+                    {
+                        "text": {
+                            "query": "Helena Kubicek Boye",
+                            "path": "authors.name"
+                        }
+                    }
+                ],
+                "should": [
+                    {
+                        "equals": {
+                            "value": 10027641,
+                            "path": "_id"
+                        }
+                    },
+                    {
+                        "equals": {
+                            "value": 10055411,
+                            "path": "_id"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "$limit": 5
+    }
+]
